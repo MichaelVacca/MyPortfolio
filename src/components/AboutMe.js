@@ -14,21 +14,20 @@ import ME from "../assets/img/ME.jpg";
 export const AboutMe = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 1, // Only one item per slide
+      items: 1,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 1, // Only one item per slide
+      items: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1, // Only one item per slide
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1, // Only one item per slide
+      items: 1,
     },
   };
   return (
@@ -66,7 +65,6 @@ export const AboutMe = () => {
                   <h5>Hockey</h5>
                   <p>Short description about Java skills.</p>{" "}
                 </div>
-                {/* ... other items */}
               </Carousel>
             </div>
           </div>

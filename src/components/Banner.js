@@ -96,7 +96,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  {/* <img src={headerImg} alt="Header Img" /> */}
                 </div>
               )}
             </TrackVisibility>

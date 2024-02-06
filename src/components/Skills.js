@@ -7,6 +7,12 @@ import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import checkmark from "../assets/img/checkmark.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import JAVA from "../assets/img/JAVA.png";
+import JavaS from "../assets/img/JS.png";
+import ReactPic from "../assets/img/REACTp.png";
+import GitPicture from "../assets/img/GITpic.png";
+import CPicture from "../assets/img/Cshaarp.png";
+import pythonPic from "../assets/img/pythonpicture.png";
 
 export const Skills = () => {
   const responsive = {
@@ -37,9 +43,10 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+                My skills section showcases proficiency in Java, JavaScript,
+                React, Git, C#, and Python, highlighting my versatility in
+                software development and web applications.<br></br> Lorem Ipsum
+                has been the industry's standard
               </p>
               <Carousel
                 responsive={responsive}
@@ -47,27 +54,27 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={JAVA} alt="Image" />
                   <h5>Java</h5>
                 </div>
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={JavaS} alt="Image" />
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={ReactPic} alt="Image" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={GitPicture} alt="Image" />
                   <h5>Git</h5>
                 </div>
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={CPicture} alt="Image" />
                   <h5>C#</h5>
                 </div>
                 <div className="item">
-                  <img src={checkmark} alt="Image" />
+                  <img src={pythonPic} alt="Image" />
                   <h5>Python</h5>
                 </div>
               </Carousel>
