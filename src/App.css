@@ -102,6 +102,27 @@ p.danger {
   color: red;
 }
 /************ Navbar Css ************/
+
+.navbar-link {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;

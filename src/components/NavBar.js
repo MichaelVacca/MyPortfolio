@@ -6,6 +6,8 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import githubLogo from "../assets/img/github.svg";
+import gitLogo from "../assets/img/whiteGIT.png";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -85,8 +87,8 @@ export const NavBar = () => {
                 <a href="#">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="#">
-                  <img src={navIcon2} alt="" />
+                <a href="https://github.com/MichaelVacca">
+                  <img src={githubLogo} alt="" />
                 </a>
                 <a href="#">
                   <img src={navIcon3} alt="" />
