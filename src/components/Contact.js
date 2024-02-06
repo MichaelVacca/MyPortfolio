@@ -3,8 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+  const publicKey = "TgAgYlsA5TOyXR5L4";
+  const serviceId = "service_v578639";
+  const templateId = "template_8y1nf6o";
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -22,32 +26,62 @@ export const Contact = () => {
       [category]: value,
     });
   };
+  emailjs.init(publicKey);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    console.log(formDetails);
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    console.log(result);
-    console.log(formDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
+
+    // Create an object with keys that match your EmailJS template placeholders
+    const emailParams = {
+      from_name: formDetails.firstName + " " + formDetails.lastName,
+      phone_number: formDetails.phone,
+      email: formDetails.email,
+      message: formDetails.message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, emailParams)
+      .then(() => {
+        setButtonText("Send");
+        setFormDetails(formInitialDetails);
+        setStatus({ success: true, message: "Message sent successfully" });
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        setButtonText("Send");
+        setStatus({
+          success: false,
+          message: "Something went wrong, please try again later.",
+        });
       });
-    }
   };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setButtonText("Sending...");
+  //   console.log(formDetails);
+  //   let response = await fetch("http://localhost:5000/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify(formDetails),
+  //   });
+  //   setButtonText("Send");
+  //   let result = await response.json();
+  //   setFormDetails(formInitialDetails);
+  //   console.log(result);
+  //   console.log(formDetails);
+  //   if (result.code == 200) {
+  //     setStatus({ succes: true, message: "Message sent successfully" });
+  //   } else {
+  //     setStatus({
+  //       succes: false,
+  //       message: "Something went wrong, please try again later.",
+  //     });
+  //   }
+  // };
 
   return (
     <section className="contact" id="connect">

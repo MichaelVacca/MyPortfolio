@@ -4,6 +4,7 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import githubLogo from "../assets/img/github.svg";
 
 export const Footer = () => {
   return (
@@ -20,13 +21,12 @@ export const Footer = () => {
                 <img src={navIcon1} alt="Icon" />
               </a>
               <a href="#">
-                <img src={navIcon2} alt="Icon" />
+                <img src={githubLogo} alt="Icon" />
               </a>
               <a href="#">
                 <img src={navIcon3} alt="Icon" />
               </a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
