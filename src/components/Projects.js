@@ -23,7 +23,7 @@ export const Projects = () => {
       imgUrl: petC,
     },
     {
-      title: "Business Startup",
+      title: "Desert Storm",
       description: "Design & Development",
       imgUrl: Desert1,
     },
