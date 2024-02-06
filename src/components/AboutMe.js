@@ -54,7 +54,7 @@ export const AboutMe = () => {
                     alt="Image"
                     style={{ maxWidth: "100%", height: "800" }}
                   />
-                  <h5>Java</h5>
+                  <h5>Who am I?</h5>
                   <p>Short description about Java skills.</p>{" "}
                 </div>
                 <div className="item">
@@ -63,7 +63,7 @@ export const AboutMe = () => {
                     alt="Image"
                     style={{ maxWidth: "100%", height: "800" }}
                   />
-                  <h5>Java</h5>
+                  <h5>Hockey</h5>
                   <p>Short description about Java skills.</p>{" "}
                 </div>
                 {/* ... other items */}
