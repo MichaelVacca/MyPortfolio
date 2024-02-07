@@ -1,0 +1,25 @@
+# Dependency directory
+node_modules/
+
+# Environment variable file
+.env
+
+# macOS system files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional nodemon log file
+nodemon.json
+
+# Optional editor directory
+.vscode/

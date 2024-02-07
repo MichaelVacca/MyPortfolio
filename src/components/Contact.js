@@ -32,55 +32,101 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    // Create an object with keys that match your EmailJS template placeholders
-    const emailParams = {
-      from_name: formDetails.firstName + " " + formDetails.lastName,
+    const emailData = {
+      from_name: `${formDetails.firstName} ${formDetails.lastName}`,
       phone_number: formDetails.phone,
       email: formDetails.email,
       message: formDetails.message,
     };
 
-    emailjs
-      .send(serviceId, templateId, emailParams)
-      .then(() => {
-        setButtonText("Send");
-        setFormDetails(formInitialDetails);
-        setStatus({ success: true, message: "Message sent successfully" });
-      })
-      .catch((error) => {
-        console.error("Failed to send email:", error);
-        setButtonText("Send");
-        setStatus({
-          success: false,
-          message: "Something went wrong, please try again later.",
-        });
+    if (!emailData.from_name) {
+      console.log("Missing required field from name");
+      setButtonText("Send");
+      setStatus({
+        success: false,
+        message: "Missing required field: from name",
       });
+      return;
+    } else if (!emailData.email) {
+      console.log("Missing required field email");
+      setButtonText("Send");
+      setStatus({ success: false, message: "Missing required field: email" });
+      return;
+    } else if (!emailData.phone_number) {
+      console.log("Missing required field phone number");
+      setButtonText("Send");
+      setStatus({
+        success: false,
+        message: "Missing required field: phone number",
+      });
+      return;
+    } else if (!emailData.message) {
+      console.log("Missing required field message");
+      setButtonText("Send");
+      setStatus({ success: false, message: "Missing required field: message" });
+      return;
+    }
+
+    emailjs.send(serviceId, templateId, emailData).then((response) => {
+      return fetch("http://localhost:5000/save-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailData),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              "Network response was not ok: " + response.statusText
+            );
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Success:", data);
+          setButtonText("Send");
+          setFormDetails(formInitialDetails);
+          setStatus({ success: true, message: "Message sent successfully" });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          setButtonText("Send");
+          setStatus({
+            success: false,
+            message: "Message sent but not saved. Please try again.",
+          });
+        });
+    });
   };
 
-  // const handleSubmit = async (e) => {
+  // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   setButtonText("Sending...");
-  //   console.log(formDetails);
-  //   let response = await fetch("http://localhost:5000/contact", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json;charset=utf-8",
-  //     },
-  //     body: JSON.stringify(formDetails),
-  //   });
-  //   setButtonText("Send");
-  //   let result = await response.json();
-  //   setFormDetails(formInitialDetails);
-  //   console.log(result);
-  //   console.log(formDetails);
-  //   if (result.code == 200) {
-  //     setStatus({ succes: true, message: "Message sent successfully" });
-  //   } else {
-  //     setStatus({
-  //       succes: false,
-  //       message: "Something went wrong, please try again later.",
+
+  //   // Create an object with keys that match your EmailJS template placeholders
+  //   const emailParams = {
+  //     from_name: formDetails.firstName + " " + formDetails.lastName,
+  //     phone_number: formDetails.phone,
+  //     email: formDetails.email,
+  //     message: formDetails.message,
+  //   };
+
+  //   emailjs
+  //     .send(serviceId, templateId, emailParams)
+  //     .then(() => {
+  //       setButtonText("Send");
+  //       setFormDetails(formInitialDetails);
+  //       setStatus({ success: true, message: "Message sent successfully" });
+  //     })
+  //     .catch((error) => {
+  //       console.error("Failed to send email:", error);
+  //       setButtonText("Send");
+  //       setStatus({
+  //         success: false,
+  //         message: "Something went wrong, please try again later.",
+  //       });
   //     });
-  //   }
   // };
 
   return (
