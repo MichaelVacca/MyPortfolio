@@ -68,7 +68,7 @@ export const Contact = () => {
     }
 
     emailjs.send(serviceId, templateId, emailData).then((response) => {
-      return fetch("https://stingray-app-is5tx.ondigitalocean.app/save-email", {
+      return fetch("https://my-portfolio-gamma-smoky.vercel.app/save-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
