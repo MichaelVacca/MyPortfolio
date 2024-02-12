@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/space-conected.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import emailjs from "@emailjs/browser";
@@ -99,35 +99,6 @@ export const Contact = () => {
         });
     });
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setButtonText("Sending...");
-
-  //   // Create an object with keys that match your EmailJS template placeholders
-  //   const emailParams = {
-  //     from_name: formDetails.firstName + " " + formDetails.lastName,
-  //     phone_number: formDetails.phone,
-  //     email: formDetails.email,
-  //     message: formDetails.message,
-  //   };
-
-  //   emailjs
-  //     .send(serviceId, templateId, emailParams)
-  //     .then(() => {
-  //       setButtonText("Send");
-  //       setFormDetails(formInitialDetails);
-  //       setStatus({ success: true, message: "Message sent successfully" });
-  //     })
-  //     .catch((error) => {
-  //       console.error("Failed to send email:", error);
-  //       setButtonText("Send");
-  //       setStatus({
-  //         success: false,
-  //         message: "Something went wrong, please try again later.",
-  //       });
-  //     });
-  // };
 
   return (
     <section className="contact" id="connect">
