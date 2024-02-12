@@ -543,6 +543,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact img {
   width: 92%;
 }
+.proj-imgbx a {
+  color: inherit; /* This will apply the color of the parent element to the link */
+  text-decoration: none; /* This will remove the underline from the link */
+}
+
+.proj-imgbx a:hover,
+.proj-imgbx a:focus {
+  color: inherit; /* Keep the color consistent even when hovering or focusing */
+  text-decoration: none; /* Optional: Remove the underline on hover/focus if you wish */
+}
+
+.proj-txtx h4,
+.proj-txtx span {
+  color: black; /* Change 'black' to whatever color you prefer for the text */
+}
+
 .contact h2 {
   font-size: 45px;
   font-weight: 700;

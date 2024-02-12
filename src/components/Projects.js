@@ -5,6 +5,7 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import acms1 from "../assets/img/acms.svg";
 import petC from "../assets/img/petclinic.png";
+import camSheild from "../assets/img/CAMSHEILD.png";
 import Desert1 from "../assets/img/DesertStorm.webp";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -16,16 +17,25 @@ export const Projects = () => {
       title: "ACMS",
       description: "Full stack management software for a local business",
       imgUrl: acms1,
+      url: "https://github.com/Iantomasi/ateliermecanique-ws",
     },
     {
       title: "Pet Clinic",
       description: "My First introduction to and full stack development",
       imgUrl: petC,
+      url: "https://github.com/cgerard321/champlain_petclinic",
     },
     {
       title: "Desert Storm",
       description: "Design & Development",
       imgUrl: Desert1,
+      url: "https://github.com/SamuelNguyen2121/UnityFinalProject",
+    },
+    {
+      title: "Cam Sheild Pro",
+      description: "A raspberryPi security camera project",
+      imgUrl: camSheild,
+      url: "https://github.com/Futurespast/SecurityCamera",
     },
   ];
 

@@ -17,15 +17,15 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#">
-                <img src={navIcon1} alt="Icon" />
+              <a href="https://www.linkedin.com/in/michael-vacca-594153230/">
+                <img src={navIcon1} alt="" />
               </a>
-              <a href="#">
-                <img src={githubLogo} alt="Icon" />
+              <a href="https://github.com/MichaelVacca">
+                <img src={githubLogo} alt="" />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <img src={navIcon3} alt="Icon" />
-              </a>
+              </a> */}
             </div>
           </Col>
         </Row>

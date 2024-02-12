@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import headerImg2 from "../assets/img/space-banner.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { HashLink } from "react-router-hash-link";
 
 export const Banner = () => {
+  const [activeLink, setActiveLink] = useState("home");
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -52,6 +54,10 @@ export const Banner = () => {
     }
   };
 
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -76,15 +82,15 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    Hello and welcome to my portfolio website! Feel free to
+                    checkout my projects, connect with me, or learn more about
+                    me.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <Nav.Link href="#connect">
+                    <button onClick={() => console.log("connect")}>
+                      Let’s Connect <ArrowRightCircle size={25} />
+                    </button>
+                  </Nav.Link>
                 </div>
               )}
             </TrackVisibility>

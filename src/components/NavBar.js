@@ -84,15 +84,15 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/michael-vacca-594153230/">
                   <img src={navIcon1} alt="" />
                 </a>
                 <a href="https://github.com/MichaelVacca">
                   <img src={githubLogo} alt="" />
                 </a>
-                <a href="#">
+                {/* <a href="#">
                   <img src={navIcon3} alt="" />
-                </a>
+                </a> */}
               </div>
               <HashLink to="#connect">
                 <button className="vvd">
