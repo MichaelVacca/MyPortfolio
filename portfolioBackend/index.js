@@ -26,7 +26,7 @@ mongoose
 const Email = require("./emailModel");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! ");
 });
 
 app.post("/save-email", async (req, res) => {
