@@ -5,31 +5,30 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const cors = require("cors");
-const app = express(); // Define `app` before using it
+const app = express();
 
-// BodyParser Middleware
 app.use(bodyParser.json());
 
-// CORS Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://my-portfolio-gamma-smoky.vercel.app",
+  })
+);
 
-// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }) // Assuming you're using a version of the driver that still requires these options
+  })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
 const Email = require("./emailModel");
 
-// Define a simple route to test your server
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// POST endpoint to save email data
 app.post("/save-email", async (req, res) => {
   try {
     const { from_name, phone_number, email, message } = req.body;
@@ -49,6 +48,5 @@ app.post("/save-email", async (req, res) => {
   }
 });
 
-// Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
