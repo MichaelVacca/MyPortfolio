@@ -90,9 +90,6 @@ export const NavBar = () => {
                 <a href="https://github.com/MichaelVacca">
                   <img src={githubLogo} alt="" />
                 </a>
-                {/* <a href="#">
-                  <img src={navIcon3} alt="" />
-                </a> */}
               </div>
               <HashLink to="#connect">
                 <button className="vvd">
