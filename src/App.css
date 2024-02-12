@@ -121,8 +121,8 @@ p.danger {
 
 .navbar-link:hover::after {
   width: 100%;
+  background-color: #22c2a7;
 }
-
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -236,7 +236,7 @@ nav.navbar .navbar-toggler-icon {
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #ffffff;
   transition: all 300ms linear;
   top: -2px;
 }
@@ -265,7 +265,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
+  background-color: #22c2a7;
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -279,7 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./assets/img/angryimg(1).png");
+  background-image: url("./assets/img/angryimg(5).png");
 }
 
 .about-bx {
@@ -305,8 +305,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
+    rgba(126, 170, 54, 0.5) -5.91%,
+    rgba(189, 99, 47, 0.5) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
@@ -368,7 +368,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-image: url("./assets/img/angryimg(14).png");
+  background-repeat: no-repeat;
+  background-size: cover; /* This will make the image cover the entire element */
+  background-position: center center; /* This centers the image in the element */
 }
+
 .skill-bx {
   background: #151515;
   border-radius: 64px;
@@ -485,7 +490,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #8bffd9 -5.91%, #43ff4d 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -532,7 +537,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #8bffd9 -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -609,7 +614,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url("./assets/img/footer-bg.png");
+  background-image: url("./assets/img/angryimg(17).png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

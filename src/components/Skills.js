@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import checkmark from "../assets/img/checkmark.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+import colorSharp from "../assets/img/angryimg(6).png";
 import JAVA from "../assets/img/JAVA.png";
 import JavaS from "../assets/img/JS.png";
 import ReactPic from "../assets/img/REACTp.png";
@@ -14,7 +14,6 @@ import pythonPic from "../assets/img/pythonpicture.png";
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -42,8 +41,7 @@ export const Skills = () => {
               <p>
                 My skills section showcases proficiency in Java, JavaScript,
                 React, Git, C#, and Python, highlighting my versatility in
-                software development and web applications.<br></br> Lorem Ipsum
-                has been the industry's standard
+                software development and web applications.<br></br>
               </p>
               <Carousel
                 responsive={responsive}
@@ -79,7 +77,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };
