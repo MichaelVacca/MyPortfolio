@@ -68,7 +68,7 @@ export const Contact = () => {
     }
 
     emailjs.send(serviceId, templateId, emailData).then((response) => {
-      return fetch("http://localhost:5000/save-email", {
+      return fetch("https://my-portfolio-gamma-smoky.vercel.app/save-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
