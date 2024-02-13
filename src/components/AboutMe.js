@@ -36,9 +36,8 @@ export const AboutMe = () => {
             <div className="about-bx wow zoomIn">
               <h2>About Me</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+                This section is dedicated to showcasing my personal interests
+                and hobbies outside of the tech world.
               </p>
               <Carousel
                 responsive={responsive}
@@ -52,7 +51,12 @@ export const AboutMe = () => {
                     style={{ maxWidth: "100%", height: "800" }}
                   />
                   <h5>Who am I?</h5>
-                  <p>Short description about Java skills.</p>{" "}
+                  <p>
+                    I started my Journey in the tech world since I was curoius
+                    on how software, websites and games were made. I've since
+                    continued to pursue and learn new topics which further
+                    reinforced this interest
+                  </p>{" "}
                 </div>
                 <div className="item">
                   <img
@@ -61,7 +65,11 @@ export const AboutMe = () => {
                     style={{ maxWidth: "100%", height: "800" }}
                   />
                   <h5>Hockey</h5>
-                  <p>Short description about Java skills.</p>{" "}
+                  <p>
+                    Being a Canadian, hockey was introduced to me when I was 2
+                    years old and I've been playing it every year ever since
+                    then.{" "}
+                  </p>{" "}
                 </div>
               </Carousel>
             </div>

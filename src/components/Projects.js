@@ -21,13 +21,13 @@ export const Projects = () => {
     },
     {
       title: "Pet Clinic",
-      description: "My First introduction to and full stack development",
+      description: "My First introduction to full stack development",
       imgUrl: petC,
       url: "https://github.com/cgerard321/champlain_petclinic",
     },
     {
       title: "Desert Storm",
-      description: "Design & Development",
+      description: "Game Design & Development",
       imgUrl: Desert1,
       url: "https://github.com/SamuelNguyen2121/UnityFinalProject",
     },
