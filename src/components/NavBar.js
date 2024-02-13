@@ -92,8 +92,7 @@ export const NavBar = () => {
                 <a href="https://github.com/MichaelVacca">
                   <img src={githubLogo} alt="" />
                 </a>
-              </div>
-              <div className="social-icon">
+                <a href="https://personal-portfolio-fr.vercel.app/">FR</a>
                 <a
                   href={cvFile}
                   download="Michael_Vacca_CV.pdf"
@@ -102,6 +101,7 @@ export const NavBar = () => {
                   <img src={downloadBTN} alt="" />
                 </a>
               </div>
+
               <HashLink to="#connect">
                 <button className="vvd">
                   <span>Let’s Connect</span>
