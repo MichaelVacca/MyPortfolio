@@ -15,6 +15,20 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
+  const [hover, setHover] = useState(false);
+
+  // Styles for normal state
+  const normalStyle = {
+    color: "white",
+    textDecoration: "none",
+  };
+
+  // Styles for hover state
+  const hoverStyle = {
+    color: "black",
+    textDecoration: "none",
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -92,7 +106,15 @@ export const NavBar = () => {
                 <a href="https://github.com/MichaelVacca">
                   <img src={githubLogo} alt="" />
                 </a>
-                <a href="https://personal-portfolio-fr.vercel.app/">FR</a>
+                <a
+                  href="https://personal-portfolio-fr.vercel.app/"
+                  style={hover ? hoverStyle : normalStyle}
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
+                >
+                  FR
+                </a>
+
                 <a
                   href={cvFile}
                   download="Michael_Vacca_CV.pdf"

@@ -408,6 +408,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+.custom-link {
+  color: rgb(240, 14, 14);
+  text-decoration: none;
+}
 
 /************ Projects Css ************/
 .project {
