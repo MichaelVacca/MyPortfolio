@@ -8,6 +8,8 @@ import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import githubLogo from "../assets/img/github.svg";
 import gitLogo from "../assets/img/whiteGIT.png";
+import cvFile from "../assets/img/MASTER.pdf";
+import downloadBTN from "../assets/img/download-button-svgrepo-com(1).svg";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -89,6 +91,15 @@ export const NavBar = () => {
                 </a>
                 <a href="https://github.com/MichaelVacca">
                   <img src={githubLogo} alt="" />
+                </a>
+              </div>
+              <div className="social-icon">
+                <a
+                  href={cvFile}
+                  download="Michael_Vacca_CV.pdf"
+                  className="btn btn-primary"
+                >
+                  <img src={downloadBTN} alt="" />
                 </a>
               </div>
               <HashLink to="#connect">
