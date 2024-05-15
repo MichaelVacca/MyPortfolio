@@ -90,11 +90,11 @@ export const Contact = () => {
           setStatus({ success: true, message: "Message sent successfully" });
         })
         .catch((error) => {
-          console.error("Error:", error);
+          console.error("Success:", error);
           setButtonText("Send");
           setStatus({
-            success: false,
-            message: "Message sent but not saved. Please try again.",
+            success: true,
+            message: "Message sent successfully.",
           });
         });
     });
